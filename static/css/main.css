@@ -117,7 +117,7 @@ body {
   font-family: "Geo", sans-serif;
   color: #4c6680; }
   body.agents {
-    background: #ea7a52; }
+    background: #999999; }
 
 .container {
   margin: 0 auto;
@@ -167,37 +167,39 @@ form {
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1px; }
-  form .input-box {
-    font-size: 30px;
-    width: 260px;
-    border: none;
-    background-color: #5a748f;
-    color: #ffa510;
-    padding: 10px;
-    font-family: "Geo", sans-serif; }
-    form .input-box:focus {
-      background-color: #64819f; }
-  form .submit-btn {
-    font-family: "Geo", sans-serif;
-    font-size: 30px;
-    margin-top: 30px;
-    background-color: #ea7a52;
-    color: #584841;
-    padding: 10px 27px;
-    width: 100%;
-    text-transform: uppercase;
-    border-right: 2px solid #584841;
-    border-bottom: 2px solid #584841;
-    border-top: 2px solid #ed9d7d;
-    border-left: 2px solid #ed9d7d; }
-    form .submit-btn i {
-      font-size: 21px;
-      vertical-align: middle; }
-    form .submit-btn:active {
-      border-right: 2px solid #ed9d7d;
-      border-bottom: 2px solid #ed9d7d;
-      border-top: 2px solid #584841;
-      border-left: 2px solid #584841; }
+
+.input-box {
+  font-size: 30px;
+  width: 260px;
+  border: none;
+  background-color: #5a748f;
+  color: #ffa510;
+  padding: 10px;
+  font-family: "Geo", sans-serif; }
+  .input-box:focus {
+    background-color: #64819f; }
+
+.submit-btn {
+  font-family: "Geo", sans-serif;
+  font-size: 30px;
+  margin-top: 30px;
+  background-color: #ea7a52;
+  color: #584841;
+  padding: 10px 27px;
+  width: 100%;
+  text-transform: uppercase;
+  border-right: 2px solid #584841;
+  border-bottom: 2px solid #584841;
+  border-top: 2px solid #ed9d7d;
+  border-left: 2px solid #ed9d7d; }
+  .submit-btn i {
+    font-size: 21px;
+    vertical-align: middle; }
+  .submit-btn:active {
+    border-right: 2px solid #ed9d7d;
+    border-bottom: 2px solid #ed9d7d;
+    border-top: 2px solid #584841;
+    border-left: 2px solid #584841; }
 
 .colors {
   display: none; }
