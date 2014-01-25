@@ -116,6 +116,8 @@ body {
   background-repeat: repeat;
   font-family: "Geo", sans-serif;
   color: #4c6680; }
+  body.agents {
+    background: #ea7a52; }
 
 .container {
   margin: 0 auto;
@@ -202,3 +204,33 @@ form {
   .colors li {
     display: block;
     padding: 90px 0; }
+
+.agent {
+  width: 135px;
+  height: 150px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block; }
+  .agent:before {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: url("../images/spy.png") 0 0 no-repeat; }
+  .agent:nth-child(3n) {
+    margin-left: 10px; }
+    .agent:nth-child(3n):before {
+      -webkit-transform: scaleX(-1);
+      -moz-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      transform: scaleX(-1); }
+  .agent span {
+    position: absolute;
+    left: 62px;
+    top: -13px;
+    color: #353f4a;
+    width: 80px; }

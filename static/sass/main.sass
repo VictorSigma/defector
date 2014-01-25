@@ -35,6 +35,8 @@ body
 	background-repeat: repeat
 	font-family: $font1
 	color: $grey1
+	&.agents
+		background: $skin
 
 .container
 	margin: 0 auto
@@ -115,4 +117,29 @@ form
 	li
 		display: block
 		padding: 90px 0
-
+.agent
+	width: 135px
+	height: 150px
+	margin-bottom: 20px
+	//background: url('../images/spy.png') 0 0 no-repeat
+	position: relative
+	display: inline-block
+	&:before
+		content: ""
+		position: absolute
+		width: 67px
+		height: 150px
+		top: 0
+		left: 0
+		z-index: -1
+		background: url('../images/spy.png') 0 0 no-repeat
+	&:nth-child(3n)
+		margin-left: 10px
+		&:before
+			@include transform(scaleX(-1))
+	span
+		position: absolute
+		left: 62px
+		top: -13px
+		color: $grey3
+		width: 80px
