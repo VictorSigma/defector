@@ -1,5 +1,6 @@
 @import "compass"
 @include global-reset
+@import "fontello"
 *:focus
 	outline: 0
 
@@ -8,6 +9,8 @@ $grey2: #374E64
 $grey1: #4C6680
 $yellow: #FFA510
 $skin: #EA7A52
+$skin-dark: #584841
+$skin-light: #ed9d7d
 $font1: 'Geo', sans-serif
 $font2: 'Helvetica', 'Arial', sans-serif
 $white: #bbb
@@ -28,7 +31,7 @@ html, body
 body
 	width: 100%
 	//background-color: $grey3
-	@include background(linear-gradient($grey1, $grey3))
+	@include background(linear-gradient($grey1, $grey2))
 	background-repeat: repeat
 	font-family: $font1
 	color: $grey1
@@ -36,6 +39,17 @@ body
 .container
 	margin: 0 auto
 	width: 320px
+
+.grey1
+	background-color: $grey1
+.grey2
+	background-color: $grey2
+.grey3
+	background-color: $grey3
+.skin
+	background-color: $skin
+.yellow
+	background-color: $yellow
 	
 h1
 	text-align: center
@@ -65,30 +79,40 @@ form
 		text-transform: uppercase
 		font-size: 20px
 		letter-spacing: 1px
-		//@include text-shadow(#777 0 1px)
-	input
+	.input-box
 		font-size: 30px
 		width: 260px
 		border: none
-		background-color: $grey1
+		background-color: #5a748f
 		color: $yellow
 		padding: 10px
 		font-family: $font1
+		&:focus
+			background-color: #64819f
 	.submit-btn
+		font-family: $font1
+		font-size: 30px
 		margin-top: 30px
 		background-color: $skin
-		@include text-shadow(#777 0 1px)
+		color: $skin-dark
 		padding: 10px 27px
 		width: 100%
 		text-transform: uppercase
-		border-right: 2px solid $grey3
-		border-bottom: 2px solid $grey3
-		border-top: 2px solid $grey1
-		border-left: 2px solid $grey1
+		border-right: 2px solid $skin-dark
+		border-bottom: 2px solid $skin-dark
+		border-top: 2px solid $skin-light
+		border-left: 2px solid $skin-light
+		i
+			font-size: 21px
+			vertical-align: middle
 		&:active
-			border-right: 2px solid $grey1
-			border-bottom: 2px solid $grey1
-			border-top: 2px solid $grey3
-			border-left: 2px solid $grey3
-
+			border-right: 2px solid $skin-light
+			border-bottom: 2px solid $skin-light
+			border-top: 2px solid $skin-dark
+			border-left: 2px solid $skin-dark
+.colors
+	display: none
+	li
+		display: block
+		padding: 90px 0
 

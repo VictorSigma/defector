@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,6 +46,51 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+@font-face {
+  font-family: 'fontello';
+  src: url("../font/fontello.eot?74201613");
+  src: url("../font/fontello.eot?74201613#iefix") format("embedded-opentype"), url("../font/fontello.woff?74201613") format("woff"), url("../font/fontello.ttf?74201613") format("truetype"), url("../font/fontello.svg?74201613#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?74201613#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-lock-open-1:before {
+  content: '\e802'; }
+
+/* '' */
 *:focus {
   outline: 0; }
 
@@ -62,11 +108,11 @@ html, body {
 
 body {
   width: 100%;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c6680), color-stop(100%, #353f4a));
-  background: -webkit-linear-gradient(#4c6680, #353f4a);
-  background: -moz-linear-gradient(#4c6680, #353f4a);
-  background: -o-linear-gradient(#4c6680, #353f4a);
-  background: linear-gradient(#4c6680, #353f4a);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #4c6680), color-stop(100%, #374e64));
+  background: -webkit-linear-gradient(#4c6680, #374e64);
+  background: -moz-linear-gradient(#4c6680, #374e64);
+  background: -o-linear-gradient(#4c6680, #374e64);
+  background: linear-gradient(#4c6680, #374e64);
   background-repeat: repeat;
   font-family: "Geo", sans-serif;
   color: #4c6680; }
@@ -74,6 +120,21 @@ body {
 .container {
   margin: 0 auto;
   width: 320px; }
+
+.grey1 {
+  background-color: #4c6680; }
+
+.grey2 {
+  background-color: #374e64; }
+
+.grey3 {
+  background-color: #353f4a; }
+
+.skin {
+  background-color: #ea7a52; }
+
+.yellow {
+  background-color: #ffa510; }
 
 h1 {
   text-align: center;
@@ -104,27 +165,40 @@ form {
     text-transform: uppercase;
     font-size: 20px;
     letter-spacing: 1px; }
-  form input {
+  form .input-box {
     font-size: 30px;
     width: 260px;
     border: none;
-    background-color: #4c6680;
+    background-color: #5a748f;
     color: #ffa510;
     padding: 10px;
     font-family: "Geo", sans-serif; }
+    form .input-box:focus {
+      background-color: #64819f; }
   form .submit-btn {
+    font-family: "Geo", sans-serif;
+    font-size: 30px;
     margin-top: 30px;
     background-color: #ea7a52;
-    text-shadow: #777777 0 1px;
+    color: #584841;
     padding: 10px 27px;
     width: 100%;
     text-transform: uppercase;
-    border-right: 2px solid #353f4a;
-    border-bottom: 2px solid #353f4a;
-    border-top: 2px solid #4c6680;
-    border-left: 2px solid #4c6680; }
+    border-right: 2px solid #584841;
+    border-bottom: 2px solid #584841;
+    border-top: 2px solid #ed9d7d;
+    border-left: 2px solid #ed9d7d; }
+    form .submit-btn i {
+      font-size: 21px;
+      vertical-align: middle; }
     form .submit-btn:active {
-      border-right: 2px solid #4c6680;
-      border-bottom: 2px solid #4c6680;
-      border-top: 2px solid #353f4a;
-      border-left: 2px solid #353f4a; }
+      border-right: 2px solid #ed9d7d;
+      border-bottom: 2px solid #ed9d7d;
+      border-top: 2px solid #584841;
+      border-left: 2px solid #584841; }
+
+.colors {
+  display: none; }
+  .colors li {
+    display: block;
+    padding: 90px 0; }
